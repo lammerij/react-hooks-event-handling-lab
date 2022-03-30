@@ -1,31 +1,13 @@
-import React from "react"
+import React from "react";
 
-function EyesOnMe()
-function focus() {
-    return (
-      <input
-        onFocus={() => {
-          console.log('Good');
-        }}
-        placeholder="onFocus is triggered when you click this input."
-      />
-    )
+function EyesOnMe() {
+  function handleFocus() {
+    console.log("Good!");
   }
-  function blur(){
-    return (
-        <input
-          onBlur={() => {
-            console.log('Hey! Eyes on me!');
-          }}
-          placeholder="onBlur is triggered when you click this input and then you click outside of it."
-        />
-      )
+  function handleBlur(){
+    console.log('Hey! Eyes on me!')
   }
-  
-{
-    return (
-        <button onFocus={focus} onBlur={blur}></button>
-    )
+  return <button onFocus={handleFocus} onBlur={handleBlur}>Eyes on me</button>;
 }
 
 export default EyesOnMe;
